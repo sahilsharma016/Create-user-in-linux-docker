@@ -1,0 +1,34 @@
+Using the useradd command:
+Open the terminal as root or use sudo before each command.
+
+Type sudo useradd -m -s /bin/bash username (replace "username" with the desired username).
+-m creates the user's home directory.
+-s /bin/bash sets the default shell to Bash.
+Set the password for the new user: sudo passwd username
+Enter the new password twice.
+
+
+#give read premission for new user
+.
+.
+
+#Shift to new user
+su - username
+
+
+#login with new created user
+cmd :ssh name@ip of machine
+
+now run docker images, "it will show premsision denied"
+
+#add new user to a group "docker"
+#run this in root user cmd
+sudo usermod -aG docker new_username  
+
+"(-aG : Adds the user to the specified group (docker).
+new_username : Replace with the actual username.
+)"
+
+groups new_username (should "docker" in listed groups)
+
+#logout new user and login again ,then run docker images 
