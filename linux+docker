@@ -34,3 +34,8 @@ new_username : Replace with the actual username.
 groups new_username (should "docker" in listed groups)
 
 #logout new user and login again ,then run docker images 
+
+#Delete a user:
+sudo userdel username (if any process is in work delete "sudo kill process-id"
+getent passwd
+
