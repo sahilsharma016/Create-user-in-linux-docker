@@ -7,6 +7,8 @@ Type sudo useradd -m -s /bin/bash username (replace "username" with the desired 
 Set the password for the new user: sudo passwd username
 Enter the new password twice.
 
+#To check all existing users in Linux, you can use the following commands:
+getent passwd
 
 #give read premission for new user
 .
